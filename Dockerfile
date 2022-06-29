@@ -5,6 +5,7 @@ ARG NR_DB_USER
 ARG NR_DB_PASS
 ARG NR_DB_HOST
 ARG NR_NAMESPACE
+ARG NR_TYPE
 ENV NRNS=${NR_NAMESPACE}
 ENV DBUSER=${NR_DB_USER}
 ENV DBPASS=${NR_DB_PASS}
@@ -20,10 +21,14 @@ USER node-red
 #WORKDIR /data
 #COPY ./package.json /data/
 #RUN npm install
-COPY package.json .
+#COPY package.json .
+
+COPY if [ "$NR_TYPE" = "controller" ] ; then \
+       package1.json .package.json; \
+    else \
+       package2.json .package.json; \
+    fi
 RUN npm install --unsafe-perm --no-update-notifier --no-fund --only=production
-
-
 WORKDIR /usr/src/node-red
 RUN npm install --no-fund --no-update-notifier --save node-red-contrib-storage-mongodb
 COPY settings.js /data/
