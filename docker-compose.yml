@@ -1,6 +1,6 @@
 version: '3.9'
 services:
-  NRController:   
+  nr-controller:   
     public: true
     build:
       context: .
@@ -9,7 +9,7 @@ services:
         - NR_ENV_ACCESS_PATH=/home/94r4d0x
         - NR_USER=94r4d0x
         - NR_DB_URL=${NR_DB_URL}
-        - NR_APP_ID="NRController"
+        - NR_APP_ID="NR-Controller"
         - NR_DB_USER=${NR_DB_USER}
         - NR_DB_PASS=${NR_DB_PASS}
         - NR_DB_HOST=${NR_DB_HOST}
@@ -17,7 +17,7 @@ services:
     ports:
       - 1880
       
-  NRWorker1:   
+  nr-worker1:   
     public: true
     build:
       context: .
@@ -26,7 +26,7 @@ services:
         - NR_ENV_ACCESS_PATH=/home/94r4d0x
         - NR_USER=94r4d0x
         - NR_DB_URL=${NR_DB_URL}
-        - NR_APP_ID="NRWorcker_ns1"
+        - NR_APP_ID="NR-Worcker_ns1"
         - NR_DB_USER=${NR_DB_USER}
         - NR_DB_PASS=${NR_DB_PASS}
         - NR_DB_HOST=${NR_DB_HOST}
@@ -34,7 +34,7 @@ services:
     ports:
       - 1880
       
-  NRWorker2:   
+  nr-worker1:   
     public: true
     build:
       context: .
@@ -43,7 +43,7 @@ services:
         - NR_ENV_ACCESS_PATH=/home/94r4d0x
         - NR_USER=94r4d0x
         - NR_DB_URL=${NR_DB_URL}
-        - NR_APP_ID="NRWorcker_ns2"
+        - NR_APP_ID="NR-Worcker_ns2"
         - NR_DB_USER=${NR_DB_USER}
         - NR_DB_PASS=${NR_DB_PASS}
         - NR_DB_HOST=${NR_DB_HOST}
@@ -51,7 +51,7 @@ services:
     ports:
       - 1880
 
-  NRWorker3:   
+  nr-worker3:   
     public: true
     build:
       context: .
@@ -60,7 +60,7 @@ services:
         - NR_ENV_ACCESS_PATH=/home/94r4d0x
         - NR_USER=94r4d0x
         - NR_DB_URL=${NR_DB_URL}
-        - NR_APP_ID="NRWorcker_ns3"
+        - NR_APP_ID="NR-Worcker_ns3"
         - NR_DB_USER=${NR_DB_USER}
         - NR_DB_PASS=${NR_DB_PASS}
         - NR_DB_HOST=${NR_DB_HOST}
