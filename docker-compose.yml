@@ -1,23 +1,6 @@
 version: '3.9'
 services:
-
   NRController:   
-    public: true
-    build:
-      context: .
-      dockerfile: Dockerfile
-      args: 
-        - NR_ENV_ACCESS_PATH=/home/94r4d0x
-        - NR_USER=94r4d0x
-        - NR_DB_URL=${NR_DB_URL}
-        - NR_APP_ID=${NR_APP_ID}
-        - NR_DB_USER=${NR_DB_USER}
-        - NR_DB_PASS=${NR_DB_PASS}
-        - NR_DB_HOST=${NR_DB_HOST}
-        - NR_NAMESPACE=${NR_NAMESPACE}
-    ports:
-      - 1880
-    NRController:   
     public: true
     build:
       context: .
