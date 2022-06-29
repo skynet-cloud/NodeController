@@ -23,11 +23,14 @@ USER node-red
 #RUN npm install
 #COPY package.json .
 
-COPY if [ "$NR_TYPE" = "controller" ] ; then \
-       package1.json .package.json; \
-    else \
-       package2.json .package.json; \
-    fi
+RUN if [ "NR_TYPE" = "controller" ] ; then 
+    COPY package1.json ./package.json;
+
+#if build tool is gradle
+else 
+    COPY package2.json ./package.json;
+fi
+
 RUN npm install --unsafe-perm --no-update-notifier --no-fund --only=production
 WORKDIR /usr/src/node-red
 RUN npm install --no-fund --no-update-notifier --save node-red-contrib-storage-mongodb
