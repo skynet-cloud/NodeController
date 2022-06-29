@@ -1,0 +1,9 @@
+{
+  "name": "node-red docker",
+  "description": "initially created for you by Node-RED 2.2.2 ",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    
+  }
+}
