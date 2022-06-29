@@ -1,9 +1,7 @@
 version: '3.9'
 services:
   mqttbroker:
-    public: true
-    container_name: mqttbroker
-    image: eclipse-mosquitto:latest
+    image: eclipse-mosquitto::1.6.13
     restart: unless-stopped
     ports: 
       - "1883:1883"
