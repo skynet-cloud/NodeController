@@ -14,7 +14,7 @@ services:
         - NR_DB_PASS=${PASS}
         - NR_DB_HOST=${HOST}
         - NR_NAMESPACE=${OKTETO_NAMESPACE}
-        - NR_TYPE=controller 
+        - NR_TYPE=ControllerPackage.json 
     ports:
       - 1880
       
@@ -32,7 +32,7 @@ services:
         - NR_DB_PASS=${PASS}
         - NR_DB_HOST=${HOST}
         - NR_NAMESPACE=${OKTETO_NAMESPACE}
-        - NR_TYPE=worker
+        - NR_TYPE=WorkerPackage.json
     ports:
       - 1880
       
@@ -50,7 +50,7 @@ services:
         - NR_DB_PASS=${PASS}
         - NR_DB_HOST=${HOST}
         - NR_NAMESPACE=${OKTETO_NAMESPACE}
-        - NR_TYPE=worker
+        - NR_TYPE=WorkerPackage.json
     ports:
       - 1880
 
@@ -68,6 +68,6 @@ services:
         - NR_DB_PASS=${PASS}
         - NR_DB_HOST=${HOST}
         - NR_NAMESPACE=${OKTETO_NAMESPACE}
-        - NR_TYPE=worker
+        - NR_TYPE=WorkerPackage.json
     ports:
       - 1880
