@@ -19,7 +19,8 @@
  *  - Node Settings
  *
  **/
-    var mongouri =  process.env.DBURL || "mongodb+srv://" + process.env.DBUSER + ":" + process.env.DBPASS + "@cluster0." + process.env.DBHOST || "s8ptv" + ".mongodb.net/nrServer" ;
+    var host =  process.env.DBHOST || "s8ptv";
+    var mongouri =  process.env.DBURL || "mongodb+srv://" + process.env.DBUSER + ":" + process.env.DBPASS + "@cluster0." + host + ".mongodb.net/nrServer" ;
     var appname =  process.env.NRNS + "_" +  process.env.APPID || "default_node";
 console.log( mongouri + " | " + appname);
 module.exports = {
@@ -408,7 +409,7 @@ mongodbSettings: {
     //mongoURI: "mongodb+srv://user:pass@cluster0.cqm6vi1.mongodb.net/nodered",
     //mongodb+srv://user:<password>@cluster0.s8ptv.mongodb.net/?retryWrites=true&w=majority
     //host: cqm6vi1, s8ptv
-    mongoURI: process.env.DBURL || "mongodb+srv://" + process.env.DBUSER + ":" + process.env.DBPASS + "@cluster0." + process.env.DBHOST  || "s8ptv" + ".mongodb.net/nrServer" ,
+    mongoURI: process.env.DBURL || "mongodb+srv://" + process.env.DBUSER + ":" + process.env.DBPASS + "@cluster0." + host + ".mongodb.net/nrServer" ,
     appname: process.env.NRNS + "_" +  process.env.APPID || "defautlnode",
 },
 
