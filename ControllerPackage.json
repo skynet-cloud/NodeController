@@ -1,0 +1,26 @@
+{
+    "name": "node-red-docker",
+    "version": "2.2.2",
+    "description": "Low-code programming for event-driven applications",
+    "homepage": "http://nodered.org",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/node-red/node-red-docker.git"
+    },
+    "private": true,
+    "dependencies": {
+    "node-red": "latest",
+    "node-red-contrib-actionflows": "latest",
+    "node-red-contrib-aedes": "latest",
+    "node-red-contrib-cron-plus": "latest",
+    "node-red-contrib-loadbalance": "latest",
+    "node-red-contrib-message-queue": "latest",
+    "node-red-contrib-mongodb4": "latest",
+    "node-red-contrib-msg-router": "latest",
+    "node-red-contrib-routing": "latest",
+    "node-red-contrib-simple-message-queue": "latest",
+    "node-red-contrib-telegrambot": "latest",
+    "node-red-contrib-xterm": "latest"
+    }
+}
