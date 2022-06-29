@@ -21,8 +21,6 @@ WORKDIR /usr/src/node-red
 RUN npm install --no-fund --no-update-notifier --save node-red-contrib-storage-mongodb
 COPY settings.js /data/
 COPY flows.json  /data/flows.json
-COPY package.json .
-RUN npm install
 # Env variables
 
     
