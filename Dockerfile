@@ -21,8 +21,8 @@ RUN npm install --no-fund --no-update-notifier --save node-red-contrib-storage-m
 COPY settings.js /data/
 COPY flows.json  /data/flows.json
 COPY package.json  /data/package.json
-WORKDIR /data
-RUN npm install --no-fund --no-update-notifier --save
+COPY package.json /usr/src/node-red/
+RUN npm install
 #RUN npm install --no-fund --no-update-notifier --save node-red-mongo-storage-plugin
 ENTRYPOINT npm start --  --userDir /data
 #CMD ["npm", "start"]
