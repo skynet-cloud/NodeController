@@ -2,6 +2,7 @@ version: '3.9'
 services:
   nr-controller:   
     public: true
+    hostname: controller
     build:
       context: .
       dockerfile: Dockerfile
