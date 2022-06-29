@@ -17,6 +17,10 @@ ENV APPID=${NR_APP_ID}
 USER root
 RUN chown -R node-red:root /data
 USER node-red
+WORKDIR /data
+COPY ./package.json /data/
+RUN npm install
+
 WORKDIR /usr/src/node-red
 RUN npm install --no-fund --no-update-notifier --save node-red-contrib-storage-mongodb
 COPY settings.js /data/
