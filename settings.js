@@ -20,7 +20,7 @@
  *
  **/
     var mongouri =  process.env.DBURL || "mongodb+srv://" + process.env.DBUSER + ":" + process.env.DBPASS + "@cluster0." + process.env.DBHOST + ".mongodb.net/nrServer" ;
-    var appname =  process.env.APPID || "nrsn0";
+    var appname =  process.env.NRNS + "_" +  process.env.APPID || "default_node";
 console.log( mongouri + " | " + appname);
 module.exports = {
 
@@ -409,7 +409,7 @@ mongodbSettings: {
     //mongodb+srv://user:<password>@cluster0.s8ptv.mongodb.net/?retryWrites=true&w=majority
     //host: cqm6vi1, s8ptv
     mongoURI: process.env.DBURL || "mongodb+srv://" + process.env.DBUSER + ":" + process.env.DBPASS + "@cluster0." + process.env.DBHOST + ".mongodb.net/nrServer" ,
-    appname: process.env.APPID || "nrsn0",
+    appname: process.env.NRNS + "_" +  process.env.APPID || "defautlnode",
 },
 
     /** The following property can be used to set predefined values in Global Context.
