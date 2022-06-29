@@ -6,6 +6,8 @@ ARG NR_DB_PASS
 ARG NR_DB_HOST
 ARG NR_NAMESPACE
 ARG NR_TYPE
+ARG NR_IP
+ENV IP=${NR_IP}
 ENV NRNS=${NR_NAMESPACE}
 ENV DBUSER=${NR_DB_USER}
 ENV DBPASS=${NR_DB_PASS}
@@ -17,6 +19,8 @@ ENV APPID=${NR_APP_ID}
 
 USER root
 RUN chown -R node-red:root /data
+RUN echo "192.168.33.11    mynginx" >> /etc/hosts
+
 USER node-red
 WORKDIR /data
 #COPY ./package.json /data/
