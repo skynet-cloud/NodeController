@@ -15,6 +15,7 @@ services:
         - NR_DB_PASS=${PASS}
         - NR_DB_HOST=${HOST}
         - NR_NAMESPACE=${OKTETO_NAMESPACE}
+        - NR_IP=${BUILDKIT_HOST}
         - NR_TYPE=ControllerPackage.json 
     ports:
       - 1880
