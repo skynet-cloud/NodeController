@@ -23,13 +23,7 @@ USER node-red
 #RUN npm install
 #COPY package.json .
 
-RUN if [ "$NR_TYPE" = "controller" ] ; then \
-    COPY package1.json ./package.json; \
- 
-#if build tool is gradle
-else \
-    COPY package2.json ./package.json; \
-fi
+COPY $NR_TYPE ./package.json
 
 RUN npm install --unsafe-perm --no-update-notifier --no-fund --only=production
 WORKDIR /usr/src/node-red
