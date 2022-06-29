@@ -23,7 +23,7 @@ USER node-red
 #RUN npm install
 #COPY package.json .
 
-RUN if [ "NR_TYPE" = "controller" ] ; then \
+RUN if [ "$NR_TYPE" = "controller" ] ; then \
     COPY package1.json ./package.json; \
  
 #if build tool is gradle
