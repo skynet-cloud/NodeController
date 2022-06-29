@@ -34,7 +34,7 @@ services:
     ports:
       - 1880
       
-  nr-worker1:   
+  nr-worker2:   
     public: true
     build:
       context: .
