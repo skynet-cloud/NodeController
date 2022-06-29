@@ -1,5 +1,5 @@
 {
-  "name": "node-red docker",
+  "name": "node-red",
   "description": "initially created for you by Node-RED 2.2.2 ",
   "version": "0.0.1",
   "private": true,
