@@ -25,6 +25,7 @@ services:
         - NR_TYPE=ControllerPackage.json 
     ports:
       - 1880
+    expose:
       - 1883
     links:
       - mqttbroker
