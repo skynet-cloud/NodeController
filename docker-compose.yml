@@ -5,6 +5,7 @@ services:
     restart: unless-stopped
     ports: 
       - "1883:1883"
+      
   nr-controller:   
     public: true
     hostname: nr-controller
@@ -24,6 +25,8 @@ services:
         - NR_TYPE=ControllerPackage.json 
     ports:
       - 1880
+    links:
+      - mqttbroker
       
   nr-worker1:   
     public: true
@@ -42,6 +45,9 @@ services:
         - NR_TYPE=WorkerPackage.json
     ports:
       - 1880
+    links:
+      - nr-controller
+      - mqttbroker
       
   nr-worker2:   
     public: true
@@ -60,6 +66,9 @@ services:
         - NR_TYPE=WorkerPackage.json
     ports:
       - 1880
+    links:
+      - nr-controller
+      - mqttbroker
 
   nr-worker3:   
     public: true
@@ -78,3 +87,6 @@ services:
         - NR_TYPE=WorkerPackage.json
     ports:
       - 1880
+    links:
+      - nr-controller
+      - mqttbroker
