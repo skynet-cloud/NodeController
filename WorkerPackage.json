@@ -19,9 +19,20 @@
     "dependencies": {
     "node-red": "latest",
     "node-red-contrib-actionflows": "latest",
+    "node-red-contrib-aedes": "latest",
+    "node-red-contrib-cron-plus": "latest",
+    "node-red-contrib-loadbalance": "latest",
+    "node-red-contrib-message-queue": "latest",
     "node-red-contrib-mongodb4": "latest",
+    "node-red-contrib-msg-router": "latest",
+    "node-red-contrib-routing": "latest",
     "node-red-contrib-simple-message-queue": "latest",
     "node-red-contrib-telegrambot": "latest",
-    "node-red-contrib-xterm": "latest"
+    "node-red-contrib-xterm": "latest",
+    "node-red-contrib-cx-mqtt-one":"latest",
+    "node-red-contrib-timeout":"latest",
+    "node-red-node-data-generator":"latest",
+    "node-red-contrib-prib-functions":"latest"
+        
     }
 }
