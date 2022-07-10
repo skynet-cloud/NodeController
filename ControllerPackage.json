@@ -21,7 +21,7 @@
     "node-red-contrib-cron-plus": "latest",
     "node-red-contrib-loadbalance": "latest",
     "node-red-contrib-message-queue": "latest",
-    "node-red-contrib-mongodb4": "latest",
+    "node-red-contrib-mongodb4-dynamic": "latest",
     "node-red-contrib-msg-router": "latest",
     "node-red-contrib-routing": "latest",
     "node-red-contrib-simple-message-queue": "latest",
