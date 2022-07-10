@@ -34,7 +34,7 @@ WORKDIR /usr/src/node-red
 RUN npm install --no-fund --no-update-notifier --save node-red-contrib-storage-mongodb
 COPY settings.js /data/
 COPY flows.json  /data/flows.json
-# RUN npm i node-red-contrib-mongodb4-dynamic
+RUN npm i node-red-contrib-mongodb4-dynamic
 # Env variables
 
     
