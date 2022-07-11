@@ -32,7 +32,7 @@
     ],
     "dependencies": {
     "node-red": "latest",
-    "node-red-contrib-mongodb4":"latest",
+    "node-red-contrib-mongodb4-dynamic":"latest",
     "node-red-contrib-actionflows": "latest",
     "node-red-contrib-aedes": "latest",
     "node-red-contrib-cron-plus": "latest",
