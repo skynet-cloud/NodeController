@@ -34,6 +34,14 @@ WORKDIR /usr/src/node-red
 RUN npm install --no-fund --no-update-notifier --save node-red-contrib-storage-mongodb
 COPY settings.js /data/
 COPY flows.json  /data/flows.json
+USER root
+#RUN chmod ugo+rw /data/package.json
+RUN chown -R node-red:root /data/package.json
+#RUN chmod ugo+rw /data/flows.json
+RUN chown -R node-red:root /data/flows.json
+RUN chown -R node-red:root /data/settings.js
+USER node-red
+
 # Env variables
 
     
