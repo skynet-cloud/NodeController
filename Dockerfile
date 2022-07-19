@@ -32,6 +32,7 @@ RUN npm install
 WORKDIR /usr/src/node-red
 
 RUN npm install --no-fund --no-update-notifier --save node-red-contrib-storage-mongodb
+RUN npm install --no-fund --no-update-notifier --save node-red-debugger
 COPY settings.js /data/
 COPY flows.json  /data/flows.json
 USER root
@@ -46,7 +47,7 @@ USER node-red
 
     
 #RUN npm install --no-fund --no-update-notifier --save node-red-mongo-storage-plugin
-#ENTRYPOINT npm start --  --userDir /data
-ENTRYPOINT npm debug --  --userDir /data
+ENTRYPOINT npm start --  --userDir /data
+
 #CMD ["npm", "start"]
 
