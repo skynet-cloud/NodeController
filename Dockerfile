@@ -29,6 +29,7 @@ WORKDIR /data
 COPY $NR_TYPE ./package.json
 #RUN npm install --unsafe-perm --no-update-notifier --no-fund --only=production
 RUN npm install
+RUN npm install -g localtunnel
 WORKDIR /usr/src/node-red
 
 RUN npm install --no-fund --no-update-notifier --save node-red-contrib-storage-mongodb
