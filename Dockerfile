@@ -17,8 +17,6 @@ ENV APPID=${NR_APP_ID}
 #    mongoURI: process.env.DBURL ||  + "mongodb+srv://" + process.env.DBUSER + ":" + process.env.DBPASS + "@cluster0." + process.env.DBHOST + ".mongodb.net/nrServer" ,
 
 USER root
-RUN apk update
-RUN apk add gcompat libc6-compat
 RUN chown -R node-red:root /data
 #RUN echo "192.168.33.11    mynginx" >> /etc/hosts
 RUN npm i -g @fusebit/tunnel
