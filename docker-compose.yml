@@ -7,7 +7,7 @@ services:
       #- "1883:1883"
       
   nr-controller:   
-    #public: true
+    public: true
     hostname: nr-controller
     build:
       context: .
@@ -23,20 +23,12 @@ services:
         - NR_NAMESPACE=${OKTETO_NAMESPACE}
         - NR_IP=${BUILDKIT_HOST}
         - NR_TYPE=ControllerPackage.json 
-    #ports:
-      #- 1880:1880
-      #- 9229:9229
+    ports:
+      - 1880:1880
+      - 9229:9229
     expose:
       - 1883
       - 1880
       - 9229
     links:
       - mqttbroker
-endpoints:
-  rules:
-    - path: /nr
-      service: nr-controller
-      port: 1880
-    - path: /nr-debug
-      service: nr-controller
-      port: 9229
