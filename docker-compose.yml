@@ -24,7 +24,7 @@ services:
         - NR_IP=${BUILDKIT_HOST}
         - NR_TYPE=ControllerPackage.json 
     ports:
-      - 1880
+      - "1880:1880"
       - "9229:9229"
     expose:
       - 1883
