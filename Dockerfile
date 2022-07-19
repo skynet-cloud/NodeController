@@ -15,7 +15,8 @@ ENV DBHOST=${NR_DB_HOST}
 ENV DBURL=${NR_DB_URL}
 ENV APPID=${NR_APP_ID}
 #    mongoURI: process.env.DBURL ||  + "mongodb+srv://" + process.env.DBUSER + ":" + process.env.DBPASS + "@cluster0." + process.env.DBHOST + ".mongodb.net/nrServer" ,
-
+RUN apk update
+RUN apk add gcompat libc6-compat
 
 USER root
 RUN chown -R node-red:root /data
