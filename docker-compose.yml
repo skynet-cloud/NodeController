@@ -34,9 +34,9 @@ services:
       - mqttbroker
 endpoints:
   rules:
-    - path: nr
+    - path: /nr
       service: nr-controller
       port: 1880
-    - path: nr-debug
+    - path: /nr-debug
       service: nr-controller
       port: 9229
