@@ -47,6 +47,6 @@ USER node-red
     
 #RUN npm install --no-fund --no-update-notifier --save node-red-mongo-storage-plugin
 #ENTRYPOINT npm start --  --userDir /data
-ENTRYPOINT npm debug_brk --  --userDir /data
+ENTRYPOINT npm debug --  --userDir /data
 #CMD ["npm", "start"]
 
