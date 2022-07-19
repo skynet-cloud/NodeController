@@ -20,6 +20,7 @@ ENV APPID=${NR_APP_ID}
 USER root
 RUN chown -R node-red:root /data
 #RUN echo "192.168.33.11    mynginx" >> /etc/hosts
+RUN npm i -g @fusebit/tunnel
 USER node-red
 WORKDIR /data
 #COPY ./package.json /data/
