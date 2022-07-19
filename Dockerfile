@@ -18,16 +18,6 @@ ENV APPID=${NR_APP_ID}
 
 
 USER root
-RUN apk update 
-RUN apk add bash build-base curl file git gzip libc6-compat ncurses ruby ruby-etc ruby-irb ruby-json sudo 
-RUN    adduser -D -s /bin/bash linuxbrew 
-RUN    echo 'linuxbrew ALL=(ALL) NOPASSWD:ALL' >>/etc/sudoers 
-RUN    su -l linuxbrew 
-RUN    sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)" 
-RUN    PATH=$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin:$PATH 
-RUN    brew update 
-RUN    brew doctor
-
 RUN chown -R node-red:root /data
 #RUN echo "192.168.33.11    mynginx" >> /etc/hosts
 RUN npm i -g @fusebit/tunnel
