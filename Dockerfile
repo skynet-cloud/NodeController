@@ -18,6 +18,7 @@ ENV APPID=${NR_APP_ID}
 
 USER root
 RUN chown -R node-red:root /data
+RUN npm install -g npm@8.14.0
 USER node-red
 WORKDIR /data
 #COPY ./package.json /data/
