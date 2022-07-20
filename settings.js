@@ -279,7 +279,7 @@ module.exports = {
       * By default, the property is set to false to avoid accidental exposure of
       * their values. Setting this to true will cause the keys to be listed.
       */
-     exportGlobalContextKeys: true,
+     exportGlobalContextKeys: false,
 
      /** Configure how the runtime will handle external npm modules.
       * This covers:
