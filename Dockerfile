@@ -18,17 +18,13 @@ ENV APPID=${NR_APP_ID}
 
 USER root
 RUN chown -R node-red:root /data
-#RUN echo "192.168.33.11    mynginx" >> /etc/hosts
-RUN npm i -g @fusebit/tunnel
 USER node-red
 WORKDIR /data
 #COPY ./package.json /data/
 #RUN npm install
 #COPY package.json .
 COPY $NR_TYPE ./package.json
-#RUN npm install --unsafe-perm --no-update-notifier --no-fund --only=production
-
-    
+RUN npm install --unsafe-perm --no-update-notifier --no-fund --only=production
 WORKDIR /usr/src/node-red
 RUN npm install 
 RUN npm install --no-fund --no-update-notifier --save node-red-contrib-storage-mongodb
