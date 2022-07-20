@@ -279,7 +279,7 @@ module.exports = {
       * By default, the property is set to false to avoid accidental exposure of
       * their values. Setting this to true will cause the keys to be listed.
       */
-     exportGlobalContextKeys: false,
+     exportGlobalContextKeys: true,
 
      /** Configure how the runtime will handle external npm modules.
       * This covers:
@@ -422,6 +422,14 @@ mongodbSettings: {
      */
     functionGlobalContext: {
         // os:require('os'),
+        telegraf:require('telegraf'),
+        telegraf-menu:require('telegraf-menu'),
+        telegram-keyboard:require('telegram-keyboard'),
+        grammy-inline-menu:require('grammy-inline-menu'),
+        telegraf-pagination:require('telegraf-pagination'),
+        telegraf-menu:require('telegraf-menu')
+        
+        
     },
 
     /** The maximum number of messages nodes will buffer internally as part of their
