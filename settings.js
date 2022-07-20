@@ -422,11 +422,13 @@ mongodbSettings: {
      */
     functionGlobalContext: {
         // os:require('os'),
-        TelegrafMenu:require('telegraf-menu'),
+TelegrafMenu:require('telegraf-menu'),
 TelegrafPagination:require('telegraf-pagination'),
 TelegrafMenu:require('telegraf-menu'),
 Telegraf:require('telegraf'),
-TelegramKeyboard:require('telegram-keyboard')
+TelegramKeyboard:require('telegram-keyboard'),
+        Grammy:require('grammy'),
+        GrammyInlineMenu:require('grammy-inline-menu')
 
        
         
