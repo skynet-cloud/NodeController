@@ -27,11 +27,7 @@ WORKDIR /data
 #COPY package.json .
 COPY $NR_TYPE ./package.json
 #RUN npm install --unsafe-perm --no-update-notifier --no-fund --only=production
-RUN npm i telegraf --save \
-    npm i telegram-keyboard --save \
-    npm i grammy-inline-menu --save \
-    npm i telegraf-pagination --save \
-    npm i telegraf-menu --save
+
     
 WORKDIR /usr/src/node-red
 RUN npm install 
@@ -40,6 +36,11 @@ RUN npm install --no-fund --no-update-notifier --save node-red-debugger
 COPY settings.js /data/
 COPY flows.json  /data/flows.json
 USER root
+RUN npm i telegraf --save \
+    npm i telegram-keyboard --save \
+    npm i grammy-inline-menu --save \
+    npm i telegraf-pagination --save \
+    npm i telegraf-menu --save
 #RUN chmod ugo+rw /data/package.json
 RUN chown -R node-red:root /data/package.json
 #RUN chmod ugo+rw /data/flows.json
