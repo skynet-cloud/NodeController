@@ -30,6 +30,11 @@ WORKDIR /usr/src/node-red
 RUN npm install 
 RUN npm install --no-fund --no-update-notifier --save node-red-contrib-storage-mongodb
 RUN npm install --no-fund --no-update-notifier --save node-red-debugger
+RUN npm i telegraf --save \
+    npm i telegram-keyboard --save \
+    npm i grammy-inline-menu --save \
+    npm i telegraf-pagination --save \
+    npm i telegraf-menu --save
 COPY settings.js /data/
 COPY flows.json  /data/flows.json
 USER root
