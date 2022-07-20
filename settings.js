@@ -422,8 +422,7 @@ mongodbSettings: {
      */
     functionGlobalContext: {
         // os:require('os'),
-        Telegraf:require('telegraf'),
-        TelegramKeyboard:require('telegram-keyboard')
+
        
         
         
