@@ -27,9 +27,14 @@ WORKDIR /data
 #COPY package.json .
 COPY $NR_TYPE ./package.json
 #RUN npm install --unsafe-perm --no-update-notifier --no-fund --only=production
-RUN npm install
+RUN npm i telegraf --save \
+    npm i telegram-keyboard --save \
+    npm i grammy-inline-menu --save \
+    npm i telegraf-pagination --save \
+    npm i telegraf-menu --save
+    
 WORKDIR /usr/src/node-red
-
+RUN npm install 
 RUN npm install --no-fund --no-update-notifier --save node-red-contrib-storage-mongodb
 RUN npm install --no-fund --no-update-notifier --save node-red-debugger
 COPY settings.js /data/
