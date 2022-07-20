@@ -32,7 +32,7 @@ RUN npm install --no-fund --no-update-notifier --save node-red-contrib-storage-m
 RUN npm install --no-fund --no-update-notifier --save node-red-debugger
 RUN npm i telegraf --save \
     npm i telegram-keyboard --save \
-    npm -i grammy --save \
+    npm i grammy --save \
     npm i grammy-inline-menu --save \
     npm i telegraf-pagination --save \
     npm i telegraf-menu --save
