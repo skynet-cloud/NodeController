@@ -25,7 +25,6 @@
     "node-red-contrib-msg-router": "latest",
     "node-red-contrib-routing": "latest",
     "node-red-contrib-simple-message-queue": "latest",
-    "node-red-contrib-telegrambot": "latest",
     "node-red-contrib-xterm": "latest",
     "node-red-contrib-cx-mqtt-one":"latest",
     "node-red-contrib-timeout":"latest",
