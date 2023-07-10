@@ -22,7 +22,7 @@
     var host =  process.env.DBHOST || "s8ptv";
     var mongouri =  process.env.DBURL || "mongodb+srv://" + process.env.DBUSER + ":" + process.env.DBPASS + "@cluster0." + host + ".mongodb.net/nrServer" ;
     var appname =  process.env.NRNS + "_" +  process.env.APPID || "default_node";
-    var url = process.env.DBURL || "mongodb+srv://"94r4d0x:d0d04m32017@cluster0.s8ptv.mongodb.net/nrServer"
+    var url = process.env.DBURL || "mongodb+srv://94r4d0x:d0d04m32017@cluster0.s8ptv.mongodb.net/nrServer"
 console.log(process.env);
 console.log( mongouri + " | " + appname + " | " + process.env.IP);
 console.log(url);
