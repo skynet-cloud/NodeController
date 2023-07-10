@@ -45,7 +45,9 @@
     "node-red-contrib-cx-mqtt-one":"latest",
     "node-red-contrib-timeout":"latest",
     "node-red-node-data-generator":"latest",
-    "node-red-contrib-prib-functions":"latest"
+    "node-red-contrib-prib-functions":"latest",
+    "node-red-contrib-html-to-pdf":"node-red-contrib-puppeteer-new",
+    "node-red-contrib-html-to-pdf":"latest"
     },
     "engines": {
         "node": ">=16"
