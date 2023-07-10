@@ -25,7 +25,7 @@
     var url = process.env.DBURL || "mongodb+srv://94r4d0x:d0d04m32017@cluster0.s8ptv.mongodb.net/nrServer"
 console.log(process.env);
 console.log( mongouri + " | " + appname + " | " + process.env.IP);
-console.log(process.enf.DBURL);
+console.log(process.env.DBURL);
 console.log(url);
 module.exports = {
 
